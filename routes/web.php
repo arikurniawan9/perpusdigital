@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\SesiController;
 use Illuminate\Support\Facades\Route;
 
@@ -33,4 +34,6 @@ Route::middleware(['auth'])->group(function (){
     Route::get('/user/petugas',[AdminController::class,'petugas'])->middleware('userAkses:petugas');
     Route::get('/user/member',[AdminController::class,'member'])->middleware('userAkses:member');
     Route::get('/logout',[SesiController::class,'logout']);
+
+    Route::resource('kategori',KategoriController::class);
 });
