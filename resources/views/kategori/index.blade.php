@@ -9,14 +9,12 @@
     <tr>
         <th>NO</th>
         <th>Nama Kategori</th>
-        <th>Deskripsi</th>
         <th>Aksi</th>
     </tr>
     @foreach ($data as $item)
     <tr>
         <td> {{$loop->iteration}} </td>
         <td> {{$item->nama_kategori}} </td>
-        <td> {{$item->deskripsi}} </td>
         <td>
             <a href="{{ route('kategori.edit', $item->id) }}">Ubah</a>
             <form method="POST" action="{{ route('kategori.destroy', $item->id) }}">

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\BukuController;
 use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\SesiController;
 use Illuminate\Support\Facades\Route;
@@ -36,4 +37,5 @@ Route::middleware(['auth'])->group(function (){
     Route::get('/logout',[SesiController::class,'logout']);
 
     Route::resource('kategori',KategoriController::class);
+    Route::resource('buku',BukuController::class);
 });

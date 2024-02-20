@@ -34,11 +34,9 @@ class KategoriController extends Controller
         //simpan data kategori
         $request->validate(
             [
-                'nama_kategori' => 'required|unique:kategoris,nama_kategori',
-                'deskripsi' => 'required'
+                'nama_kategori' => 'required|unique:kategori,nama_kategori',
             ],[
                 'nama_kategori.required|required|unique' => 'Nama Katagori Sudah terdaftar',
-                'deskripsi.required' => 'Deskripsi masih kosong'
             ]
         );
 
@@ -71,7 +69,6 @@ class KategoriController extends Controller
         //proses edit
         $request->validate([
             'nama_kategori' => 'required|unique:kategori,name,' . $kategori->id,
-            'deskripsi' => 'required'
         ]);
 
         $kategori->update($request->all());
