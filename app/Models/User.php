@@ -43,4 +43,10 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    // Definisikan relasi dengan peminjaman
+    public function peminjaman()
+    {
+        return $this->hasMany(Peminjaman::class);
+    }
 }

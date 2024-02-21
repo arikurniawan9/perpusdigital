@@ -10,6 +10,11 @@
   </div>
     
 @endif
+@if ($message = Session::get('success'))
+    <div class="alert alert-success">
+        {{ $message }}
+    </div>
+@endif
 <form action="" method="POST">
     @csrf
   <div class="mb-3">
@@ -23,3 +28,4 @@
 
   <button type="submit" class="btn btn-primary">Login</button>
 </form>
+<a href=" {{route('register')}} ">Registrasi akun</a>

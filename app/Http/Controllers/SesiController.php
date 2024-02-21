@@ -28,11 +28,11 @@ class SesiController extends Controller
 
         if(Auth::attempt($infologin)){
             if(Auth::user()->role == 'admin'){
-                return redirect('user/admin');
+                return redirect('home/admin');
             } elseif(Auth::user()->role == 'petugas'){
-                return redirect('user/petugas');
+                return redirect('home/petugas');
             } elseif(Auth::user()->role == 'member'){
-                return redirect('user/member');
+                return redirect('home/member');
             }
         }else{
             return redirect('')->withErrors('Username dan Password yang dimasukkan tidak sesuai')->withInput();
@@ -43,4 +43,5 @@ class SesiController extends Controller
         Auth::logout();
         return redirect('');
     }
+    
 }

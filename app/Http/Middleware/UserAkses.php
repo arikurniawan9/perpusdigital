@@ -19,6 +19,6 @@ class UserAkses
             return $next($request);
         }
 
-        return redirect('user');
+        return redirect('home');
     }
 }

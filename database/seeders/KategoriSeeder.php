@@ -15,15 +15,13 @@ class KategoriSeeder extends Seeder
     {
         $kategoriData = [
             [
-                'nama_kategori'=>'Alat Elektronik',
+                'nama_kategori'=>'Agama',
             ],[
-                'nama_kategori'=>'Makanan',
+                'nama_kategori'=>'Biologi',
             ],[
-                'nama_kategori'=>'Pakaian',
+                'nama_kategori'=>'Bisnis',
             ],[
-                'nama_kategori'=>'Minuman',
-            ],[
-                'nama_kategori'=>'Sayuran',
+                'nama_kategori'=>'Teknologi',
             ],
         ];
 
